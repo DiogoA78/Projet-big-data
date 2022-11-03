@@ -1,7 +1,7 @@
 # Projet-big-data
 
 ## Tasks :
-- Trouver une api
+- Scrapper les données
 - Kafka + Traitement Spark
 - Mongodb
 - DataViz
