@@ -2,6 +2,6 @@
 
 ## Tasks :
 - Scrapper les données
-- Kafka + Traitement Spark
+- HDFS + Traitement Spark
 - Mongodb
 - DataViz
