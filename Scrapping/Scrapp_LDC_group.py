@@ -7,45 +7,60 @@ from pathlib import Path
 
 browser = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver')
 
-browser.get('https://www.whoscored.com/')
+browser.get('https://www.uefa.com/uefachampionsleague/')
 time.sleep(2)
 
 browser.maximize_window()
 time.sleep(2)
 
-cookies = browser.find_element_by_xpath('//[@id="qc-cmp2-ui"]/div[2]/div/button[2]') 
+cookies = browser.find_element_by_xpath('/html/body/div[6]/div[2]/div/div[1]/div/div[2]/div/button[3]')
 cookies.click()
 time.sleep(2)
 
-ucl = browser.find_element_by_xpath('//*[@id="popular-tournaments-list"]/li[19]/a') 
+ucl = browser.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/nav/div[4]/div/ul/li[4]/a')
 ucl.click()
 time.sleep(2)
 
+team= browser.find_elements_by_class_name('js-team-name')
+list_team = [elem.text for elem in team]
+print(list_team)
 
-change_date = browser.find_element_by_xpath('//[@id="date-controller"]/a[1]') 
-change_date.click()
-time.sleep(2)
+match= browser.find_elements_by_class_name('js-played')
+list_match = [elem.text for elem in match]
+print(list_match)
 
-titre = browser.find_elements_by_tag_name('h2')
-list_anim = [elem.text for elem in titre]
-print(list_anim)
+win = browser.find_elements_by_class_name('js-won')
+list_win = [elem.text for elem in win]
+print(list_win)
 
-stylemangas = browser.find_elements_by_class_name('stl')
-list_style = [elem.text for elem in stylemangas]
-print(list_style)
+draw = browser.find_elements_by_class_name('js-drawn')
+list_draw = [elem.text for elem in draw]
+print(list_draw)
 
-genremangas = browser.find_elements_by_class_name('gr')
-list_genre = [elem.text for elem in genremangas]
-print(list_genre)
+lose = browser.find_elements_by_class_name('js-lost')
+list_lose = [elem.text for elem in lose]
+print(list_lose)
 
-synopsismangas = browser.find_elements_by_class_name('text-justify')
-list_synopsis = [elem.text for elem in synopsismangas]
-print(list_synopsis)
+GF = browser.find_elements_by_class_name('js-goalsFor')
+list_GF = [elem.text for elem in GF]
+print(list_GF)
 
-df = pd.DataFrame(list(zip(list_anim, list_style, list_genre, list_synopsis)),
-               columns =['titre', 'style', 'genre', 'synopsis'])
+GA = browser.find_elements_by_class_name('js-goalsAgainst')
+list_GA = [elem.text for elem in GA]
+print(list_GA)
 
-filepath = Path('')
+GD = browser.find_elements_by_class_name('js-goalDifference')
+list_GD = [elem.text for elem in GD]
+print(list_GD)
+
+pts = browser.find_elements_by_class_name('js-points')
+list_pts = [elem.text for elem in pts]
+print(list_pts)
+
+df = pd.DataFrame(list(zip(list_team, list_match, list_win, list_draw, list_lose, list_GF, list_GA, list_GD, list_pts)),
+                columns =['team', 'nb_match',  'win', 'draw', 'lose', 'GF', 'GA', 'GD', 'pts'])
+
+filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/ucl_group.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)

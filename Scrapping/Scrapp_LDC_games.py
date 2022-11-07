@@ -7,45 +7,50 @@ from pathlib import Path
 
 browser = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver')
 
-browser.get('https://www.whoscored.com/')
+browser.get('https://www.flashscore.com/')
 time.sleep(2)
 
 browser.maximize_window()
 time.sleep(2)
 
-cookies = browser.find_element_by_xpath('//[@id="qc-cmp2-ui"]/div[2]/div/button[2]') 
+cookies = browser.find_element_by_id('onetrust-accept-btn-handler')
 cookies.click()
 time.sleep(2)
 
-ucl = browser.find_element_by_xpath('//*[@id="popular-tournaments-list"]/li[19]/a') 
+ucl = browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/aside/div/div[2]/div[2]/div[1]/div[8]/a/span[2]')
 ucl.click()
 time.sleep(2)
 
-
-change_date = browser.find_element_by_xpath('//[@id="date-controller"]/a[1]') 
-change_date.click()
+results = browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/main/div[4]/div[1]/div[3]/div/a[2]') 
+results.click()
 time.sleep(2)
 
-titre = browser.find_elements_by_tag_name('h2')
-list_anim = [elem.text for elem in titre]
-print(list_anim)
+date = browser.find_elements_by_class_name('event__time')
+list_date= [elem.text for elem in date]
+print(list_date)
 
-stylemangas = browser.find_elements_by_class_name('stl')
-list_style = [elem.text for elem in stylemangas]
-print(list_style)
+equipe_dom = browser.find_elements_by_class_name('event__participant--home')
+list_equipe_dom = [elem.text for elem in equipe_dom]
+print(list_equipe_dom)
 
-genremangas = browser.find_elements_by_class_name('gr')
-list_genre = [elem.text for elem in genremangas]
-print(list_genre)
+score_dom = browser.find_elements_by_class_name('event__score--home')
+list_score_dom = [elem.text for elem in score_dom]
+print(list_score_dom)
 
-synopsismangas = browser.find_elements_by_class_name('text-justify')
-list_synopsis = [elem.text for elem in synopsismangas]
-print(list_synopsis)
+score_ext = browser.find_elements_by_class_name('event__score--away')
+list_score_ext = [elem.text for elem in score_ext]
+print(list_score_ext)
 
-df = pd.DataFrame(list(zip(list_anim, list_style, list_genre, list_synopsis)),
-               columns =['titre', 'style', 'genre', 'synopsis'])
+equipe_ext = browser.find_elements_by_class_name('event__participant--away')
+list_equipe_ext = [elem.text for elem in equipe_ext]
+print(list_equipe_ext)
 
-filepath = Path('')
+df = pd.DataFrame(list(zip(list_date, list_equipe_dom, list_score_dom, list_score_ext, list_equipe_ext)),
+                columns =['date', 'equipe_dom',  'score_dom', 'score_ext', 'equipe_ext'])
+
+df = df.drop(df.index[[96,97,98,99,100,101,102,103,104]])
+
+filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/ucl_games.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)
