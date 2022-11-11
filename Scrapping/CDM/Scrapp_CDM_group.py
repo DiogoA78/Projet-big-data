@@ -32,3 +32,10 @@ print(list_group)
 df = pd.DataFrame(list(zip(list_group)),
                 columns =['standings'])
 
+filepath = Path('/Users/madeu/Documents/GitHub/Projet-big-data/dataset/CDM/cdm_group.csv')
+filepath.parent.mkdir(parents=True, exist_ok=True)
+df.to_csv(filepath)
+print(df)
+
+browser.close()
+

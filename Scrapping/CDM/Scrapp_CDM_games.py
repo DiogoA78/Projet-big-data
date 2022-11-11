@@ -40,7 +40,7 @@ print(list_equipe_ext)
 df = pd.DataFrame(list(zip(list_date, list_equipe_dom, list_equipe_ext)),
                 columns =['date', 'equipe_dom', 'equipe_ext'])
 
-filepath = Path('/Users/madeu/CDM/Projet-big-data/dataset/cdm_games.csv')
+filepath = Path('/Users/madeu/Documents/GitHub/Projet-big-data/dataset/CDM/cdm_games.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)
