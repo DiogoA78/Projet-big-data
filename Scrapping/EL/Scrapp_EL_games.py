@@ -50,7 +50,7 @@ df = pd.DataFrame(list(zip(list_date, list_equipe_dom, list_score_dom, list_scor
 
 df = df.drop(df.index[[96,97,98,99,100,101,102,103,104]])
 
-filepath = Path('/Users/arounekrishnaraj/Documents/Projet-big-data/dataset/el_games.csv')
+filepath = Path('/Users/arounekrishnaraj/Documents/Projet-big-data/dataset/EL/el_games.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)

@@ -33,9 +33,22 @@ df = df.replace({'Shakhtar Donetsk': "Shakhtar_Donetsk"}, regex=True)
 df = df.replace({'Club Brugge': "Club_Brugge"}, regex=True)
 df = df.replace({'Dinamo Zagreb': "Dinamo_Zagreb"}, regex=True)
 df = df.replace({'M. Haifa': "M._Haifa"}, regex=True)
+df = df.replace({'Sporting CP': "Sporting_CP"}, regex=True)
+df = df.replace({'Czech Republic': "Czech_Republic"}, regex=True)
+df = df.replace({'João Cancelo': "João_Cancelo"}, regex=True)
+df = df.replace({'Diogo Jota': "Diogo_Jota"}, regex=True)
+df = df.replace({'De Bruyne': "De_Bruyne"}, regex=True)
+df = df.replace({'Di María': "Di_María"}, regex=True)
+df = df.replace({'André Silva': "André_Silva"}, regex=True)
+df = df.replace({'Zambo Anguissa': "Zambo_Anguissa"}, regex=True)
+df = df.replace({'Vinícius Júnior': "Vinícius_Júnior"}, regex=True)
+df = df.replace({'Rafa Silva': "Rafa_Silva"}, regex=True)
+df = df.replace({'Alexis Sánchez': "Alexis_Sánchez"}, regex=True)
 
 
-filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/ucl_players_attack.csv')
+
+
+filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/LDC/ucl_players_attack.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)

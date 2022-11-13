@@ -37,7 +37,7 @@ df = df.replace({'Union SG': "Union_SG"}, regex=True)
 
 
 
-filepath = Path('/Users/arounekrishnaraj/Documents/Projet-big-data/dataset/el_stats_clubs_defending.csv')
+filepath = Path('/Users/arounekrishnaraj/Documents/Projet-big-data/dataset/EL/el_stats_clubs_defending.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)

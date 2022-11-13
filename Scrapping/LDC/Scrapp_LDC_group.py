@@ -60,7 +60,7 @@ print(list_pts)
 df = pd.DataFrame(list(zip(list_team, list_match, list_win, list_draw, list_lose, list_GF, list_GA, list_GD, list_pts)),
                 columns =['team', 'nb_match',  'win', 'draw', 'lose', 'GF', 'GA', 'GD', 'pts'])
 
-filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/ucl_group.csv')
+filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/LDC/ucl_group.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)

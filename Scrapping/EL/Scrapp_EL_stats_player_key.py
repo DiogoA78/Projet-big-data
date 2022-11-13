@@ -33,10 +33,13 @@ df = df.replace({'Crvena zvezda': "Crvena_zvezda"}, regex=True)
 df = df.replace({'AEK Larnaca': "AEK_Larnaca"}, regex=True)
 df = df.replace({'Union Berlin': "Union_Berlin"}, regex=True)
 df = df.replace({'Union SG': "Union_SG"}, regex=True)
+df = df.replace({'Altay Bayındır': "Altay_Bayındır"}, regex=True)
+df = df.replace({'S. Mmaee': "S._Mmaee"}, regex=True)
+df = df.replace({'Aitor Ruibal': "Aitor_Ruibal"}, regex=True)
 
 
 
-filepath = Path('/Users/arounekrishnaraj/Documents/Projet-big-data/dataset/el_stats_player_key.csv')
+filepath = Path('/Users/arounekrishnaraj/Documents/Projet-big-data/dataset/EL/el_stats_player_key.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)
