@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-browser = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver')
+browser = webdriver.Chrome('/Users/arounekrishnaraj/Desktop/BIGDATA projet/chromedriver')
 
 browser.get('https://www.uefa.com/uefachampionsleague/statistics/clubs/goals/')
 time.sleep(2)

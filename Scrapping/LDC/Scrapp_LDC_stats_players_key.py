@@ -5,7 +5,7 @@ import pandas as pd
 from pathlib import Path
 
 
-browser = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver')
+browser = webdriver.Chrome('/Users/arounekrishnaraj/Desktop/BIGDATA projet/chromedriver')
 
 browser.get('https://www.uefa.com/uefachampionsleague/')
 time.sleep(2)
