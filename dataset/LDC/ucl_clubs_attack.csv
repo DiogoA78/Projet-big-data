@@ -1,31 +1,16 @@
-,team
-0,01 Man_City England 415 12 38 82 6 8
-1,02 Barcelona Spain 398 11 40 107 6 8
-2,03 Real_Madrid Spain 372 11 40 99 6 6
-3,04 Liverpool England 349 14 46 83 6 12
-4,05 Marseille France 336 6 30 89 6 26
-5,06 Chelsea England 333 7 27 73 6 16
-6,07 Paris France 317 13 29 127 6 14
-7,08 Atlético Spain 309 5 39 83 6 20
-8,09 Bayern Germany 305 17 19 91 6 17
-9,10 Juventus Italy 283 8 27 80 6 17
-10,11 Leverkusen Germany 278 4 31 82 6 13
-11,12 Benfica Portugal 273 11 30 88 6 5
-12,13 Napoli Italy 259 15 19 88 6 15
-13,14 Milan Italy 257 7 24 82 6 13
-14,15 Salzburg Austria 249 3 24 58 6 8
-15,16 Ajax Netherlands 247 8 26 56 6 18
-16,17 Tottenham England 246 7 31 60 6 16
-17,17 Celtic Scotland 246 2 32 59 6 4
-18,19 Leipzig Germany 245 12 30 53 6 15
-19,19 Inter Italy 245 10 34 41 6 20
-20,21 Porto Portugal 222 7 29 66 6 11
-21,21 M._Haifa Israel 222 6 30 54 6 16
-22,23 Dortmund Germany 211 10 19 77 6 8
-23,24 Club_Brugge Belgium 209 6 20 79 6 9
-24,25 Sevilla Spain 201 6 17 75 6 8
-25,26 Frankfurt Germany 190 5 19 52 6 16
-26,27 Plzeň Czech_Republic 184 4 22 51 6 7
-27,28 Dinamo_Zagreb Croatia 177 2 15 55 6 2
-28,29 Copenhagen Denmark 170 1 21 58 6 7
-29,30 Rangers Scotland 166 1 20 61 6 15
+,Rank,Equipe,Country,Attack,Assist,Corner_taken,Offside,Dribble,Match_played
+0,01,Man_City,England,415,12,38,6,8,82
+1,02,Barcelona,Spain,398,11,40,6,8,107
+2,03,Real_Madrid,Spain,372,11,40,6,6,99
+3,04,Liverpool,England,349,14,46,6,12,83
+4,05,Marseille,France,336,6,30,6,26,89
+5,06,Chelsea,England,333,7,27,6,16,73
+6,07,Paris,France,317,13,29,6,14,127
+7,08,Atlético,Spain,309,5,39,6,20,83
+8,09,Bayern,Germany,305,17,19,6,17,91
+9,10,Juventus,Italy,283,8,27,6,17,80
+10,11,Leverkusen,Germany,278,4,31,6,13,82
+11,12,Benfica,Portugal,273,11,30,6,5,88
+12,13,Napoli,Italy,259,15,19,6,15,88
+13,14,Milan,Italy,257,7,24,6,13,82
+14,15,Salzburg,Austria,249,3,24,6,8,58
