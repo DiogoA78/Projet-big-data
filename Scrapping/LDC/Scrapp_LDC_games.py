@@ -5,7 +5,7 @@ import pandas as pd
 from pathlib import Path
 
 
-browser = webdriver.Chrome('/Users/arounekrishnaraj/Desktop/BIGDATA projet/chromedriver')
+browser = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver')
 
 browser.get('https://www.flashscore.com/')
 time.sleep(2)
@@ -50,7 +50,7 @@ df = pd.DataFrame(list(zip(list_date, list_equipe_dom, list_score_dom, list_scor
 
 df = df.drop(df.index[[96,97,98,99,100,101,102,103,104]])
 
-filepath = Path('/Users/arounekrishnaraj/Documents/Projet-big-data/dataset/LDC/LDC_games.csv')
+filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/LDC/ucl_games.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)

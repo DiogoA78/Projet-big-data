@@ -1,31 +1,16 @@
-,team
-0,01 Real_Madrid Spain 114 42 49 6 23
-1,02 Liverpool England 110 47 39 6 24
-2,03 Man_City England 109 42 36 6 31
-3,04 Bayern Germany 106 51 34 6 21
-4,04 Napoli Italy 106 44 43 6 19
-5,06 Atlético Spain 94 35 33 6 26
-6,07 Barcelona Spain 92 34 33 6 25
-7,07 Chelsea England 92 33 33 6 26
-8,09 Benfica Portugal 83 34 29 6 20
-9,09 Porto Portugal 83 31 31 6 21
-10,09 Leverkusen Germany 83 29 33 6 21
-11,12 Celtic Scotland 82 29 34 6 19
-12,12 Salzburg Austria 82 26 36 6 20
-13,12 Marseille France 82 24 37 6 21
-14,15 Paris France 80 36 28 6 16
-15,16 Juventus Italy 79 26 37 6 16
-16,16 Tottenham England 79 26 32 6 21
-17,18 Milan Italy 77 29 26 6 22
-18,19 Leipzig Germany 76 29 27 6 20
-19,19 M._Haifa Israel 76 22 25 6 29
-20,21 Inter Italy 72 32 22 6 18
-21,22 Sevilla Spain 69 24 31 6 14
-22,22 Dortmund Germany 69 20 32 6 17
-23,24 Plzeň Czech_Republic 68 20 25 6 23
-24,25 Ajax Netherlands 64 23 27 6 14
-25,26 Frankfurt Germany 63 25 18 6 20
-26,27 Dinamo_Zagreb Croatia 55 20 17 6 18
-27,28 Club_Brugge Belgium 54 20 19 6 15
-28,28 Copenhagen Denmark 54 16 27 6 11
-29,30 Sporting_CP Portugal 45 21 16 6 8
+,Rank,Equipe,Country,Total_attempt,Attempt_on_target,Attempt_off_target,Blocked,Match_played
+0,01,Real_Madrid,Spain,114,42,49,23,6
+1,02,Liverpool,England,110,47,39,24,6
+2,03,Man_City,England,109,42,36,31,6
+3,04,Bayern,Germany,106,51,34,21,6
+4,04,Napoli,Italy,106,44,43,19,6
+5,06,Atlético,Spain,94,35,33,26,6
+6,07,Barcelona,Spain,92,34,33,25,6
+7,07,Chelsea,England,92,33,33,26,6
+8,09,Benfica,Portugal,83,34,29,20,6
+9,09,Porto,Portugal,83,31,31,21,6
+10,09,Leverkusen,Germany,83,29,33,21,6
+11,12,Celtic,Scotland,82,29,34,19,6
+12,12,Salzburg,Austria,82,26,36,20,6
+13,12,Marseille,France,82,24,37,21,6
+14,15,Paris,France,80,36,28,16,6

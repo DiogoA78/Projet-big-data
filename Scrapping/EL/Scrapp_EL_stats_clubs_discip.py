@@ -34,6 +34,7 @@ df = df.replace({'Crvena zvezda': "Crvena_zvezda"}, regex=True)
 df = df.replace({'AEK Larnaca': "AEK_Larnaca"}, regex=True)
 df = df.replace({'Union Berlin': "Union_Berlin"}, regex=True)
 df = df.replace({'Union SG': "Union_SG"}, regex=True)
+df = df.replace({'Dynamo Kyiv': "Dynamo_Kyiv"}, regex=True)
 
 
 
