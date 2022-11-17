@@ -20,7 +20,7 @@ services:
     container_name: datanode
     restart: always
     volumes:
-      - hadoop_datanode:/hadoop/dfs/data
+      - ./work:/opt/workspace/
     environment:
       SERVICE_PRECONDITION: "namenode:9870"
     env_file:
@@ -48,13 +48,15 @@ services:
       - SPARK_DRIVER_MEMORY=2G
       - SPARK_EXECUTOR_MEMORY=2G
     volumes:
-       - ./work:/home/jovyan/work
+       - ./work:/opt/workspace/
 
   pyspark-notebook:
     image: jupyter/pyspark-notebook
     container_name: pyspark_notebook
     ports:
       - "8888:8888"
+    volumes:
+       - ./work:/home/jovyan/work
 volumes:
   hadoop_namenode:
   hadoop_datanode:
