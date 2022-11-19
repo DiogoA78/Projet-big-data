@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-browser = webdriver.Chrome('/Users/arounekrishnaraj/Desktop/BIGDATA projet/chromedriver')
+browser = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver')
 
 browser.get('https://www.uefa.com/uefachampionsleague/statistics/clubs/defending/')
 time.sleep(2)
@@ -38,7 +38,7 @@ df = df.replace({'Sporting CP': "Sporting_CP"}, regex=True)
 df = df.replace({'Czech Republic': "Czech_Republic"}, regex=True)
 
 
-filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/LDC/ucl_clubs_def.csv')
+filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/work/data/LDC/ucl_clubs_def.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)

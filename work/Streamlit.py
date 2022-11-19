@@ -7,8 +7,8 @@ import hydralit_components as hc
 st.set_page_config(layout='wide',initial_sidebar_state='collapsed',)
 
 #Ucl
-df1 = pd.read_csv("data/LDC/LDC_games.csv", index_col=0)
-df2 = pd.read_csv("data/LDC/LDC_group.csv", index_col=0)
+df1 = pd.read_csv("data/LDC/ucl_games.csv", index_col=0)
+df2 = pd.read_csv("data/LDC/ucl_group.csv", index_col=0)
 #Ucl C
 df3 = pd.read_csv("data/LDC/ucl_clubs_attack.csv", index_col=0)
 df4 = pd.read_csv("data/LDC/ucl_clubs_attempt.csv", index_col=0)

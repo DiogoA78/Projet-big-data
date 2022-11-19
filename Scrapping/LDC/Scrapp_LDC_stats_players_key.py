@@ -5,7 +5,7 @@ import pandas as pd
 from pathlib import Path
 
 
-browser = webdriver.Chrome('/Users/arounekrishnaraj/Desktop/BIGDATA projet/chromedriver')
+browser = webdriver.Chrome('C:\Program Files\chromedriver_win32\chromedriver')
 
 browser.get('https://www.uefa.com/uefachampionsleague/')
 time.sleep(2)
@@ -43,7 +43,7 @@ df = df.replace({'Van Dijk': "Van_Dijk"}, regex=True)
 df = df.replace({'Diogo Costa': "Diogo_Costa"}, regex=True)
 df = df.replace({'Nuno Tavares': "Nuno_Tavares"}, regex=True)
 
-filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/dataset/LDC/ucl_players_key.csv')
+filepath = Path('C:/Users/diogo/OneDrive/Documents/GitHub/Projet-big-data/work/data/LDC/ucl_players_key.csv')
 filepath.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(filepath)
 print(df)
